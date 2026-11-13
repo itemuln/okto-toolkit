@@ -35,6 +35,30 @@ python -m okto --help
 
 The event host confirmed in this task that prewritten tools are permitted. The accessible competition chat described five stages but supplied no original competition image or challenge files. These implementations follow those stage descriptions; the examples are synthetic practice fixtures, not answers to the actual competition.
 
+## Install from PyPI
+
+Use a virtual environment so installation also works with managed Python installations.
+
+**Windows (PowerShell):**
+
+```powershell
+py -3 -m venv okto-env
+.\okto-env\Scripts\python -m pip install okto-toolkit
+.\okto-env\Scripts\python -m okto --help
+.\okto-env\Scripts\python -m okto solve input.txt
+```
+
+**macOS (Terminal):**
+
+```sh
+python3 -m venv okto-env
+./okto-env/bin/python -m pip install okto-toolkit
+./okto-env/bin/python -m okto --help
+./okto-env/bin/python -m okto solve input.txt
+```
+
+The [PyPI project page](https://pypi.org/project/okto-toolkit/) shows available versions. The core package has no required third-party dependencies. For extras, install `"okto-toolkit[audio,web]"` in the same environment and follow the preparation section below.
+
 ## Windows: start here
 
 Extract the source ZIP. Open PowerShell in the extracted `okto-toolkit` folder.
@@ -59,7 +83,7 @@ py -3 -m okto --help
 
 `install-windows.cmd` runs the same offline install. `okto.cmd` runs the `.pyz` directly. Installed users can use `okto` if their Python Scripts directory is on PATH; `py -3 -m okto` avoids that requirement. On machines with several Python versions, use `py -3.13` or another installed version >=3.11 consistently. No administrator rights should be needed in a writable virtual environment.
 
-The direct GitHub wheel and offline launcher work independently of PyPI. PyPI publishing setup is in progress; until its project page is live, install from the direct wheel URL above rather than assuming the package name is available from the index.
+The direct GitHub wheel and offline launcher are alternatives to installing from PyPI, and can be transferred to a computer without internet access.
 
 Practice fixture answers: the puzzle is double Base64 encoding of `flag{offline_ready}`; the log includes `flag{log_clue}` and a suspicious backup path; the audio draws `KEY`; the HTML has a mismatched button selector and a hidden source flag; the graph's A → B → C → D path costs 0.
 
