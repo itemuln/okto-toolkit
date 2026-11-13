@@ -1,5 +1,14 @@
 # Validation record — 13 November 2026
 
+## Public macOS and Windows checks
+
+All six jobs in [GitHub Actions run 43451304367](https://github.com/itemuln/okto-toolkit/actions/runs/43451304367) passed for runtime source commit `eeeb47b088bb380944dd2557aaf2311636330e1b`:
+
+- macOS and Windows on Python 3.11 and 3.13: tests, lint, wheel/sdist builds, clean offline installation, and all five stages through both installed package and dependency-free launcher.
+- Real Chromium diagnostics on both macOS and Windows.
+
+This supersedes the original local-only platform limitations below. Actual event hardware and real OCR accuracy remain unverified.
+
 ## Checks performed
 
 - Source tests on macOS ARM64 / Python 3.13.9: **57 passed**, including three real Chromium integration tests. The full suite ran in an isolated environment without NumPy/SoundFile, exercising the standard-library audio path.
@@ -17,7 +26,7 @@ The delivered wheel, source distribution, and offline launcher are built from th
 
 `dist/SHA256SUMS.txt` records artifact hashes. The outer handoff ZIP has its own SHA-256 file. Neither the presence of hashes nor this record is a code-signing certificate.
 
-## Remaining limitations
+## Original local handoff limitations (before public checks)
 
 - **No Windows machine was available for execution here.** The wheel is universal pure Python and uses portable file handling. Windows batch files and Windows/Linux CI are provided, but that workflow has not been run on a hosted repository. Validate Python installation, command launcher, console behavior, optional native wheels, and Chromium on the actual event PC.
 - Python 3.11 is the declared minimum and has a configured CI lane, but local execution here used Python 3.13; the offline smoke launcher is additionally checked with the available Python 3.14 interpreter.

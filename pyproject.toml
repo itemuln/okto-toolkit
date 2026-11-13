@@ -11,6 +11,20 @@ requires-python = ">=3.11"
 license = "MIT"
 authors = [{name = "OKTO event toolkit"}]
 dependencies = []
+classifiers = [
+  "Operating System :: Microsoft :: Windows",
+  "Operating System :: MacOS",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.13",
+  "Environment :: Console",
+]
+
+[project.urls]
+Homepage = "https://github.com/itemuln/okto-toolkit"
+Source = "https://github.com/itemuln/okto-toolkit"
+Issues = "https://github.com/itemuln/okto-toolkit/issues"
+Downloads = "https://github.com/itemuln/okto-toolkit/releases"
 
 [project.optional-dependencies]
 audio = ["numpy>=2", "soundfile>=0.13"]

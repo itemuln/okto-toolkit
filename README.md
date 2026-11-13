@@ -59,7 +59,7 @@ py -3 -m okto --help
 
 `install-windows.cmd` runs the same offline install. `okto.cmd` runs the `.pyz` directly. Installed users can use `okto` if their Python Scripts directory is on PATH; `py -3 -m okto` avoids that requirement. On machines with several Python versions, use `py -3.13` or another installed version >=3.11 consistently. No administrator rights should be needed in a writable virtual environment.
 
-The package is distributed through **GitHub Releases**, not PyPI. Use the direct wheel URL above or the included wheel; do not assume `pip install okto-toolkit` by name downloads this package.
+The direct GitHub wheel and offline launcher work independently of PyPI. PyPI publishing setup is in progress; until its project page is live, install from the direct wheel URL above rather than assuming the package name is available from the index.
 
 Practice fixture answers: the puzzle is double Base64 encoding of `flag{offline_ready}`; the log includes `flag{log_clue}` and a suspicious backup path; the audio draws `KEY`; the HTML has a mismatched button selector and a hidden source flag; the graph's A → B → C → D path costs 0.
 
