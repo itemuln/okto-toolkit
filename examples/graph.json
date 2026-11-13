@@ -1,0 +1,6 @@
+{
+  "directed": true,
+  "source": "A",
+  "target": "D",
+  "edges": [["A", "B", 4], ["A", "C", 5], ["B", "C", -7], ["B", "D", 10], ["C", "D", 3]]
+}

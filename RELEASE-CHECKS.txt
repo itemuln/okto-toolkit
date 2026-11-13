@@ -1,0 +1,20 @@
+OKTO 1.0.0 — release checks, 2026-11-13
+
+PASS: 57 tests, including real Chromium tests, Python 3.13.9 on macOS ARM64.
+PASS: 54 tests with NumPy available; 3 optional browser tests skipped in that run.
+PASS: Ruff static checks.
+PASS: universal py3-none-any wheel and source distribution built with setuptools.
+PASS: clean Python 3.13 virtual environment, offline/no-dependencies wheel installation.
+PASS: installed console entry point and python -m okto.
+PASS: Python 3.13 -S offline pyz, all five stages, correct error exit codes.
+PASS: Python 3.14.7 -S offline pyz, all five stages, correct error exit codes.
+PASS: synthetic KEY spectrogram visually inspected.
+
+NOT RUN: Windows execution, hosted GitHub Actions, Python 3.11 runtime.
+NOT RUN: real Tesseract OCR recognition; parser behavior uses controlled test responses.
+NOT RUN: actual contest files; no original competition image/attachments accessible.
+NOT RUN: Python 3.14 wheel-install smoke check: local Homebrew ensurepip bootstrap failed.
+          Python 3.14's dependency-free pyz check passed independently.
+
+No PyPI publication or remote upload. No perfect automatic puzzle/password claim.
+See VALIDATION.md and README.md for assumptions and limitations.

@@ -1,0 +1,3 @@
+2026-11-13T14:00:00Z INFO GET /index.html 200
+2026-11-13T14:01:00Z WARN GET /archive/backup/password.txt 403
+2026-11-13T14:02:00Z ERROR secret payload=ZmxhZ3tsb2dfY2x1ZX0=

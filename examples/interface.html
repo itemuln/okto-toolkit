@@ -1,0 +1,10 @@
+<!doctype html>
+<html lang="en"><meta charset="utf-8"><title>OKTO debugging fixture</title>
+<button id="unlock">Unlock</button><p id="result"></p>
+<p hidden>flag{inspect_the_source}</p>
+<!-- TODO: fix the missing selector below -->
+<script>
+document.querySelector('#unlock-btn').addEventListener('click', () => {
+  document.querySelector('#result').textContent = 'Unlocked';
+});
+</script></html>

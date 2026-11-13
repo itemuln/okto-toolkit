@@ -1,0 +1,6 @@
+include README.md VALIDATION.md LICENSE *.cmd
+recursive-include tools *.py
+recursive-include examples *.txt *.log *.json *.html *.wav
+recursive-include tests *.py
+recursive-include .github *.yml
+global-exclude __pycache__ *.pyc
